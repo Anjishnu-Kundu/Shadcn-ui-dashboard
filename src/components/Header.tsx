@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { useState } from "react";
 import { read } from "fs";
-
+import { MdAccountCircle } from "react-icons/md";
 
 export default function Header() {
     const [notification, setNotification] = useState<any>([
@@ -29,6 +29,7 @@ export default function Header() {
         }
     ])
     return (
+        <>
         <div className="grid grid-cols-2 gap-4 p-4 border-r border-b">
             <CommandDemo />
             <div className="flex items-center justify-end">
@@ -56,7 +57,10 @@ export default function Header() {
                         </DropdownMenuItem>)}
                     </DropdownMenuContent>
                 </DropdownMenu>
+                {/* <MdAccountCircle className=""/> */}
             </div>
+            
         </div>
+        </>
     )
 }

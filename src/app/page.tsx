@@ -3,11 +3,15 @@ import { DataTableDemo } from "@/components/Cards/DataTable";
 import General from "@/components/Cards/General";
 import Lines from "@/components/Cards/Lines";
 import { TableDemo } from "@/components/Cards/Table";
+import Sidebar from "@/components/Sidebar";
+import UserItem from "@/components/UserItem";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
   return (
+    <>
+    <UserItem />
     <div className="gap-[32px] grid">
       <div className="grid grid-cols-2 gap-[32px]">
         <General />
@@ -40,5 +44,6 @@ export default function Home() {
       </div>
       {/* <Button variant={"outline"}>Click Me!</Button> */}
     </div>
+    </>
   );
 }
